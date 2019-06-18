@@ -1,0 +1,32 @@
+body {
+    background-image: url(../images/soft_circle_scales.png);
+    padding: 75px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+div {
+    background-color: #8F84B5;
+    width: 50%;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    padding: 10px;
+}
+
+button {
+    display: inline-block;
+}
+
+img {
+    width: auto;
+    height: auto;
+    max-width: 70px;
+    max-height: 70px;
+}
+
+#game-title {
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    letter-spacing: 0.7em;
+    color: #fff;
+}
