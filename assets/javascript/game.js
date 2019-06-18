@@ -9,26 +9,29 @@ var targetNo = 0;
 var crystalArray = [];
 
 
-// make a function for resetting the game ?
+// make a function for resetting the game
 function gameReset () {
     crystalArray = [];
     $("#score-calc").empty();
     score = 0;
-    targetNo = Math.floor(Math.random()*75 + 1);
+    // calculate target number
+    targetNo = Math.floor(Math.random()*50 + 15);
     $("#score-calc").text(targetNo);
 
     for (var i = 0; i < 4; i++) {
 
-        // function to generate random numbers for the crystals
+        // loop to generate random numbers for the crystals
         crystalArray.push(Math.floor(Math.random()*15 + 1));
     
     }
 
     for ( var i = 0; i < crystalArray.length; i++) {
+        // loop to assign array values to crystals
         $("#crys"+i).attr("data-value", crystalArray[i]);
     
     }
 
+    // populate DOM with wins, losses, and scores
     $("#win-no").text(wins);
     $("#loss-no").text(loss);
     $("#total-tally").text(score);
@@ -39,20 +42,7 @@ function gameReset () {
 // console log targetNo to keep track of it
 console.log(targetNo);
 
-// display the targetNo in HTML
-//$("#score-calc").text(targetNo);
-
-
-// function to assign random numbers to buttons
-//for ( j = 0; j < crystalArray.length; j++) {}
-
-// populate wins, losses, and total score in corresponding divs & spans
-
-
-// make an on click event to return the value of the crystal clicked
-
-// function to convert click into text
-
+// on click event 
 $("button").on("click", function () {
 
     // how to refer to clicked value?
@@ -65,7 +55,7 @@ $("button").on("click", function () {
     // add clicked value to score
     $("#total-tally").text(score);
 
-    // tally wins if number is matched
+// compare score to targetNo, create conditions to tally wins or losses depending on comparison
 if (score === targetNo) {
     wins++;
     $("#win-no").text(wins);
@@ -79,11 +69,8 @@ if (score === targetNo) {
 
 });
 
+// reset game in event of win or loss
 gameReset();
-
-
-
-
 
 //closing document.ready syntax
 }); 
