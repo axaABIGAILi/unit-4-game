@@ -30,3 +30,14 @@ img {
     letter-spacing: 0.7em;
     color: #fff;
 }
+
+#win-no, #loss-no, #score-calc {
+    color: #fff;
+    font-weight: bold;
+}
+
+#total-tally {
+    color: #fff;
+    font-weight: bold;
+    font-size: 30px;
+}
